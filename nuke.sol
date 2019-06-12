@@ -20,13 +20,13 @@ contract nuke {
     }
 
     mapping (address => uint) public balanceOf;
-    uint public deposited;
+    uint public payments;
 
-    function deposit() public payable {
-        require(deposited + msg.value > deposited);
+    function payment() public payable {
+        require(payments + msg.value > payments);
         require(balanceOf[msg.sender] + msg.value > balanceOf[msg.sender]); // Check for overflows
         balanceOf[msg.sender] += msg.value;
-        deposited += msg.value;
+        payments += msg.value;
     }
 
     function balanceOfOwner() public onlyOwner view returns (uint balance) {
