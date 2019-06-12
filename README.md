@@ -1,4 +1,4 @@
-#for nuke transactions and payments
+#For nuke transactions and payments
 
 - Set pizza buyer (trustedBuyer)
  ```
